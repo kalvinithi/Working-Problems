@@ -29,30 +29,35 @@ Coefficients Interpretation
 Each coefficient shows the effect of the predictor variable on the log of the expected number of claims.
 
 Intercept (-1.270422, p < 2e-16)
-   The intercept represents the log-expected claim frequency when all predictors (Age, Gender, and Vehicle_Type) are at their reference levels. Here, it represents the baseline log-claim frequency for female customers driving sedans (the reference categories for Gender and Vehicle_Type).
-Since it's highly significant (p < 0.001), this baseline is reliably different from zero.
+  
+   The intercept represents the log-expected claim frequency when all predictors (Age, Gender, and Vehicle_Type) are at their reference levels. Here, it represents the baseline log-claim frequency for female customers driving sedans (the reference categories for Gender and Vehicle_Type).Since it's highly significant (p < 0.001), this baseline is reliably different from zero.
 
 Age (0.016278, p < 0.001)
-  For each additional year in age, the log-expected number of claims increases by 0.0163.
-This is significant (p < 0.001), suggesting age has a positive and statistically significant effect on claim frequency, with older customers generally having a slightly higher claim frequency.
+    
+     For each additional year in age, the log-expected number of claims increases by 0.0163.This is significant (p < 0.001), suggesting age has a positive and statistically significant effect on claim frequency, with older customers generally having a slightly higher claim frequency.
 
-GenderMale (0.053664, p = 0.4902)
-  This coefficient represents the change in the log-claim frequency for male customers compared to female customers.
-The effect is positive (0.0537), but it's not statistically significant (p = 0.4902), indicating no meaningful difference in claim frequency between male and female customers.
+Gender   Male (0.053664, p = 0.4902)
+    
+     This coefficient represents the change in the log-claim frequency for male customers compared to female customers.
+     The effect is positive (0.0537), but it's not statistically significant (p = 0.4902), indicating no meaningful difference in claim frequency between male and female customers.
 
-Vehicle_TypeSUV (0.080727, p = 0.4161)
- This coefficient shows the log-claim frequency difference for SUV drivers compared to sedan drivers.
-The positive coefficient (0.0807) indicates SUV drivers may have slightly higher claim frequencies than sedan drivers, but the effect is not statistically significant (p = 0.4161).
+Vehicle_Type   SUV (0.080727, p = 0.4161)
+   
+    This coefficient shows the log-claim frequency difference for SUV drivers compared to sedan drivers. 
+    The positive coefficient (0.0807) indicates SUV drivers may have slightly higher claim frequencies than sedan drivers, but the effect is not statistically significant (p = 0.4161).
 
-Vehicle_TypeTruck (0.184078, p = 0.0484)
-  The coefficient for trucks indicates that truck drivers have a higher log-claim frequency than sedan drivers.
-This is marginally significant (p = 0.0484), suggesting a small but meaningful increase in claim frequency for truck drivers compared to sedan drivers.
+Vehicle_Type   Truck (0.184078, p = 0.0484)
+    
+     The coefficient for trucks indicates that truck drivers have a higher log-claim frequency than sedan drivers. 
+     This is marginally significant (p = 0.0484), suggesting a small but meaningful increase in claim frequency for truck drivers compared to sedan drivers.
 
 Model Fit Statistics
-Null deviance (1118.8) and Residual deviance (1074.6): The reduction in deviance indicates the model improves over the null model, though a more substantial decrease would indicate a stronger fit.
-AIC (2142.3): The Akaike Information Criterion measures the model's goodness-of-fit, with lower values generally indicating better models.
+   
+      Null deviance (1118.8) and Residual deviance (1074.6): The reduction in deviance indicates the model improves over the null model, though a more substantial decrease would indicate a stronger fit.
+      AIC (2142.3): The Akaike Information Criterion measures the model's goodness-of-fit, with lower values generally indicating better models.
 
 Summary
-  Age and Vehicle_TypeTruck significantly impact claim frequency, with age showing a positive relationship with claims and trucks associated with higher claim frequency.
-Gender and Vehicle_TypeSUV show no significant effects, indicating they do not strongly influence claim frequency in this dataset.
+ 
+  Age and Vehicle_Type Truck significantly impact claim frequency, with age showing a positive relationship with claims and trucks associated with higher claim frequency.
+Gender and Vehicle_Type SUV show no significant effects, indicating they do not strongly influence claim frequency in this dataset.
 This model suggests that age and driving a truck are primary factors that could be used to adjust premiums, with older drivers and truck drivers potentially paying slightly higher premiums due to increased claim frequency.
